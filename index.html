@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> R.Sarathkumar Personal Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #93a150;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        header {
+            background: #242f94;
+            color: rgb(179, 59, 109);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1 {
+            font-size: 24px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: rgb(219, 134, 37);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(to right, #1cb5e0, #000851);
+            color: white;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        #hero h2 {
+            font-size: 2.5rem;
+        }
+        #hero span {
+            color: #ffde59;
+        }
+        #hero button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #ffde59;
+            color: #333;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #hero button:hover {
+            background: #ffd633;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 10%;
+        }
+        section h2 {
+            margin-bottom: 20px;
+            color: #222;
+            text-align: center;
+        }
+
+        /* About */
+        #about p {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .skill {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea, form button {
+            margin: 8px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #e76215;
+            color: rgb(48, 190, 179);
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #75813c;
+        }
+        #formMessage {
+            text-align: center;
+            margin-top: 10px;
+            color: green;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #6d27af;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h1>R.Sarathkumar </h1>
+<h1> SRM Arts and Sciecne College </h1>
+<h1> Department of Computer Science </h1>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div>
+            <h2>Hello, I'm <span>R.Sarathkumar </span></h2>
+            <p>Web Developer | Designer | Problem Solver</p>
+            <button onclick="scrollToSection('projects')">See My Work</button>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I’m a passionate web developer with a knack for creating engaging and user-friendly websites. I love exploring new technologies, solving problems, and bringing creative ideas to life through code.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Python</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A modern, responsive portfolio to showcase my skills and projects.</p>
+            </div>
+            <div class="project-card">
+                <h3>Task Manager App</h3>
+                <p>A simple task manager with local storage support.</p>
+            </div>
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>A weather application fetching real-time data from an API.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 R.Sarathkumar  | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Form handling
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            document.getElementById("formMessage").textContent = "Thank you! Your message has been sent.";
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
